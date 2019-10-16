@@ -1,0 +1,24 @@
+{
+  "name": "require-test",
+  "version": "1.0.0",
+  "main": "./index.js",
+  "author": "LaySent <laysent@hotmail.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "@babel/cli": "^7.6.4",
+    "@babel/core": "^7.6.4",
+    "@babel/plugin-transform-modules-commonjs": "^7.6.0",
+    "electron": "^6.0.12",
+    "rollup": "^1.23.1",
+    "webpack": "^4.41.1",
+    "webpack-cli": "^3.3.9",
+    "webpack-require-performance-plugin": "^0.1.0"
+  },
+  "scripts": {
+    "generate": "node ./bin/generate.js",
+    "babel": "babel src --out-dir dist",
+    "webpack": "webpack",
+    "rollup": "rollup ./src/index.js --file ./dist/index.js --format iife",
+    "start": "electron ."
+  }
+}
